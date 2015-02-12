@@ -52,6 +52,16 @@ public class LonelyTwitterActivity extends Activity {
 	@Override
 	protected void onStart() {
 		// TODO Auto-generated method stub
+		User u = new Readers();
+		
+		ArrayList<User> array = new ArrayList<User>();
+		
+		try {
+			u.setUsername("Joe");
+		} catch (IOException e) {
+			
+		}
+		
 		super.onStart();
 		tweets = loadFromFile();
 		adapter = new ArrayAdapter<NormalTweetModel>(this,
